@@ -1,0 +1,60 @@
+
+public class Product {
+    protected int price;
+    private long productId;
+    private String productName;
+    protected int numOrder;
+
+    public Product() {
+    }
+
+    public Product(int price, long productId, String productName, int numOrder) {
+        this.price = price;
+        this.productId = productId;
+        this.productName = productName;
+        this.numOrder = numOrder;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public long getProductId() {
+        return productId;
+    }
+
+    public void setProductId(long productId) {
+        this.productId = productId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public int getNumOrder() {
+        return numOrder;
+    }
+
+    public void setNumOrder(int numOrder) {
+        this.numOrder = numOrder;
+    }
+
+    public int TotalPrice(){
+        return price * numOrder;
+    }
+    
+    @Override
+    public String toString() {
+        return "Product{" + "price=" + price + ", productId=" + productId + ", productName=" + productName + ", numOrder=" + numOrder + '}';
+    }
+    
+    
+}
