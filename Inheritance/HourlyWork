@@ -1,0 +1,25 @@
+package sit.model;
+
+public class HourlyWork extends Employee {
+
+    private double getHourWork;
+
+    public double getGetHourWork() {
+        return getHourWork;
+    }
+
+    public void setGetHourWork(double getHourWork) {
+        this.getHourWork = getHourWork;
+    }
+
+    @Override
+    public double pay() {
+        return payRate * getHourWork;
+    }
+
+    @Override
+    public String toString() {
+        return "HourlyWork{" + "getHourWork=" + getHourWork + '}';
+    }
+
+}
