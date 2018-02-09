@@ -1,0 +1,20 @@
+package sit.view;
+
+import sit.model.Employee;
+import sit.model.Manager;
+
+public class TestEmployee {
+
+    public static void main(String[] args) {
+        Employee emp1 = new Employee(1, "Cherpang", 50000);
+        System.out.println(emp1);
+        System.out.println("Pay for Cherpang: "+emp1.pay());
+        
+        Manager mng1 = new Manager(12000, 2 ,"PunPun", 100000);
+        System.out.println(mng1);
+        System.out.println("Pay for PunPun: "+mng1.pay());
+        
+        mng1.setEmpId("Em-02 ");
+        System.out.println(mng1.toString());
+    }
+}

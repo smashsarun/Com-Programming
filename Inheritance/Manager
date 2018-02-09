@@ -1,0 +1,39 @@
+package sit.model;
+
+public class Manager extends Employee {
+
+    //shadowing
+    private String empId;
+    private double positionAllowance;
+
+    public void setEmpId(String empId) {
+        //subclass empId (String, not long Data type)
+        this.empId = empId;
+    }
+
+    public Manager(double positionAllowance, long empId, String empName, double payRate) {
+        //super constructor
+        super(empId, empName, payRate);
+        this.positionAllowance = positionAllowance;
+    }
+
+    public double getPositionAllowance() {
+        return positionAllowance;
+    }
+
+    public void setPositionAllowance(double positionAllowance) {
+        this.positionAllowance = positionAllowance;
+    }
+
+    @Override
+    public double pay() {
+        //modify here
+        return payRate + positionAllowance;
+    }
+
+    @Override
+    public String toString() {
+        return "Manager{" + super.toString() + "Manage ID " + empId + "positionAllowance=" + positionAllowance + '}';
+    }
+
+}
