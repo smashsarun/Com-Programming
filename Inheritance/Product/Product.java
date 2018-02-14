@@ -1,10 +1,11 @@
 
 public class Product {
     protected double price;
-    private long productId;
-    private String productName;
+    protected long productId;
+    protected String productName;
 
     public Product() {
+        super();
     }
 
     public Product(double price, long productId, String productName) {
@@ -40,7 +41,8 @@ public class Product {
 
     public double TotalPrice(){
         return price ;
-    }
+    }  
+
     
     @Override
     public String toString() {

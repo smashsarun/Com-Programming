@@ -2,6 +2,10 @@
 public class Toy extends Product{
     private int minimumAge;
     private String color;
+    
+    public Toy(){
+        super();
+    }
 
     public Toy(int minimumAge, String color, double price, long productId, String productName) {
         super(price, productId, productName);

@@ -3,6 +3,10 @@ public class Food extends Product {
 
     private String taste;
     private String container;
+    
+    public Food(){
+        super();
+    }
 
     public Food(String taste, String container, double price, long productId, String productName) {
         super(price, productId, productName);
