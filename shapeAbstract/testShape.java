@@ -11,7 +11,7 @@ public class testShape {
         System.out.println(t1);
         System.out.println("Shape Area="+t1.getArea());
         
-        Square sq1 = new Square(5,103);
+        Square sq1 = new Square(5,"103");
         System.out.println(sq1);
         System.out.println("Shape Area="+sq1.getArea());
     }

@@ -8,7 +8,7 @@ public abstract class Triangle extends Shape {
     public Triangle() {
     }
     
-    public Triangle(double base, double height, int shapeId) {
+    public Triangle(double base, double height, String shapeId) {
         super(shapeId);
         this.base = base;
         this.height = height;

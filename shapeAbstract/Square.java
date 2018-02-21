@@ -4,7 +4,7 @@ package shapeAbstract;
 public class Square extends Shape {
     private double side;
 
-    public Square(double side, int shapeId) {
+    public Square(double side, String shapeId) {
         super(shapeId);
         this.side = side;
     }
@@ -21,6 +21,11 @@ public class Square extends Shape {
     public double getArea(){
         double area = side*side;
         return area;
+    }
+    
+    @Override
+    public double getPerimeter(){
+        return side*4;
     }
 
     @Override

@@ -3,21 +3,21 @@ package shapeAbstract;
 
 public abstract class Shape {
 //เพราะมี method abstract เลยต้องมาแก้ที่ class ด้วย
-    private int shapeId;
+    private String shapeId;
 
     public Shape() {
     }
     
     
-    public Shape(int shapeId) {
+    public Shape(String shapeId) {
         this.shapeId = shapeId;
     }
 
-    public int getShapeId() {
+    public String getShapeId() {
         return shapeId;
     }
 
-    public void setShapeId(int shapeId) {
+    public void setShapeId(String shapeId) {
         this.shapeId = shapeId;
     }
 
