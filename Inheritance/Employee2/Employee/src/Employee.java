@@ -1,5 +1,6 @@
 
 public class Employee {
+
     private long empId;
     private String empName;
     private double payrate;
@@ -33,15 +34,26 @@ public class Employee {
     public void setPayrate(double payrate) {
         this.payrate = payrate;
     }
-    
-    public double pay(){
+
+    public double pay() {
         return this.payrate;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Employee temp;
+        if (obj != null && obj instanceof Employee) {
+            temp = (Employee)obj;
+            if (empId == temp.empId) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
     public String toString() {
         return "Employee{" + "empId=" + empId + ", empName=" + empName + ", payrate=" + payrate + '}';
     }
-    
-    
+
 }

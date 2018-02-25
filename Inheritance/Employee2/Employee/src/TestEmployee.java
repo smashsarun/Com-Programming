@@ -7,5 +7,8 @@ public class TestEmployee {
         
         HourlyWork hw1 = new HourlyWork(6,00002,"Pim",8.12);
         System.out.println(hw1.toString());
+        HourlyWork hw2 = new HourlyWork(3,00002,"Pimmy",6.0);
+        System.out.println(hw2.toString());
+        System.out.println(hw1.equals(hw2));
     }
 }
