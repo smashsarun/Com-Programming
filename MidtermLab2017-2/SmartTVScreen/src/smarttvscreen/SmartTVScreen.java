@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SmartTVScreen {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
         Scanner input = new Scanner(System.in);
         int numOfRows = 3;
         Cursor cursor = new Cursor(numOfRows);
@@ -30,6 +30,8 @@ public class SmartTVScreen {
                 case 's':
                     cursor.increaseRow();
                     break;
+                default :
+                    System.out.println( grid[cursor.getRow()].getApps()[cursor.getColumn()].toString() );
 //3.	ปรับปรุง Method main ของ Class SmartTVScreen เมื่อเลือกปุ่มใด ๆ สามารถแสดงผลลัพธ์จากเมดธอด toString() ของ application ที่อยู่ ณ ตำแหน่งของ Cursor ได้ 
             }
 

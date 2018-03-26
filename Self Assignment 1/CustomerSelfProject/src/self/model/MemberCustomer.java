@@ -5,7 +5,7 @@ package self.model;
 public class MemberCustomer extends Customer {
     
    private double points;
-   private static double discountRate = 0.2; //กำหนดค่าให้เพราะโจทย์บอกว่าจะได้ลด 20%
+   private double discountRate = 0.2; //กำหนดค่าให้เพราะโจทย์บอกว่าจะได้ลด 20%
 
     public MemberCustomer() {
     }
@@ -28,7 +28,7 @@ public class MemberCustomer extends Customer {
     
    @Override
     public  void setDiscountRate(double discountRate){
-        MemberCustomer.discountRate = discountRate;
+        this.discountRate = discountRate;
     }
     
    @Override
