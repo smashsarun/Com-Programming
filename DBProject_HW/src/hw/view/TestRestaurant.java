@@ -10,11 +10,13 @@ public class TestRestaurant {
         try{
             RestaurantController resCtrl = new RestaurantController("sit","sit");
             
-            Restaurant rs1 = new Restaurant("Omelet",1,35);
+            Restaurant rs1 = new Restaurant(1,"Omelet",1,35);
+            Restaurant rs2 = new Restaurant(2,"Corn",2,20);
             
             //resCtrl.CreateRestaurantTable();
             //resCtrl.DropRestaurantTable();
-            resCtrl.InsertCourse(rs1);
+            //resCtrl.InsertMenu(rs1);
+            resCtrl.UpdateMenuName(rs2,1);
             resCtrl.CloseRestaurantConnection();
         }
         catch (SQLException sqlEx) {

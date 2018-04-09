@@ -5,19 +5,13 @@ public class Restaurant {
     private String nameOfOrder;
     private int numOfOrder;
     private double price;
+    private int number;
 
-    public Restaurant(String nameOfOrder, int numOfOrder, double price) {
+    public Restaurant(int number, String nameOfOrder, int numOfOrder, double price) {
         this.nameOfOrder = nameOfOrder;
         this.numOfOrder = numOfOrder;
         this.price = price;
-    }
-
-    public String getNameOfMenu() {
-        return nameOfOrder;
-    }
-
-    public void setNameOfMenu(String nameOfOrder) {
-        this.nameOfOrder = nameOfOrder;
+        this.number = number;
     }
 
     public int getNumOfOrder() {
@@ -36,10 +30,25 @@ public class Restaurant {
         this.price = price;
     }
 
+    public String getNameOfOrder() {
+        return nameOfOrder;
+    }
+
+    public void setNameOfOrder(String nameOfOrder) {
+        this.nameOfOrder = nameOfOrder;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
     @Override
     public String toString() {
-        return "Restaurant{" + "nameOfOrder=" + nameOfOrder + ", numOfOrder=" + numOfOrder + ", price=" + price + '}';
+        return "Restaurant{" + "nameOfOrder=" + nameOfOrder + ", numOfOrder=" + numOfOrder + ", price=" + price + ", number=" + number + '}';
     }
-    
-    
+       
 }
