@@ -20,17 +20,17 @@ public class TestCourseDB {
                        
             //courseCtrl.insertFromFile("courseList.txt");
             
-//            ArrayList<Course> cList = courseCtrl.selectCourse();
-//            for (int i = 0; i < cList.size(); i++) {
-//                System.out.println(cList.get(i));
-//                String cId = cList.get(i).getCourseId();
-//                if (cId.equalsIgnoreCase("GEN111")) {
-//                    cList.get(i).setCourseName("Strong Man");
-//                }
-//            }
+            ArrayList<Course> cList = courseCtrl.selectCourse();
+            for (int i = 0; i < cList.size(); i++) {
+                System.out.println(cList.get(i));
+                String cId = cList.get(i).getCourseId();
+                if (cId.equalsIgnoreCase("GEN111")) {
+                    cList.get(i).setCourseName("Strong Man");
+                }
+            }
 
-            courseCtrl.excuteSQLFromUser("select * from course where courseId='GEN111'");
-            courseCtrl.excuteSQLFromUser("update course set courseName = 'Strong Man' where courseId = 'GEN111'");
+//            courseCtrl.excuteSQLFromUser("select * from course where courseId='GEN111'");
+//            courseCtrl.excuteSQLFromUser("update course set courseName = 'Strong Man' where courseId = 'GEN111'");
                     
             courseCtrl.closeCourseConnection();
         }
