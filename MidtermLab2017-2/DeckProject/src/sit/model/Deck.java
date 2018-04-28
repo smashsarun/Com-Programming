@@ -3,9 +3,18 @@ package sit.model;
 public class Deck {
 
     private int size;
+    private Card cards[] = new Card[52];
 
     public Deck() {
-    
+        
+        int a = 0;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 1; j < 14; j++) {
+                cards[a] = new Card (j,i);
+                a++;
+            }
+        }
+        size = 52;
     
     }
 
@@ -59,7 +68,17 @@ public class Deck {
     }
 
     public Card getMaxCard() { 
-    
+        Card maxCard = null;
+        
+        for (int i = 0; i < size; i++) {
+            if (cards[i].getSuit() >= cards[i+1].getSuit()) {
+                maxCard = cards[i];
+                if (cards[i].getRank() >= cards[i+1].getSuit() ) {
+                    maxCard = cards[i];
+                }
+            }
+        }
+        return maxCard;
     }
 
 }
