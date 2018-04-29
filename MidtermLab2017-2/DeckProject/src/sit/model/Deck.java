@@ -3,10 +3,10 @@ package sit.model;
 public class Deck {
 
     private int size;
-    private Card cards[] = new Card[52];
+    private Card cards[];
 
     public Deck() {
-        
+        cards = new Card[52];
         int a = 0;
         for (int i = 0; i < 4; i++) {
             for (int j = 1; j < 14; j++) {
@@ -57,14 +57,31 @@ public class Deck {
      * Randomly rearrange the Cards in the Deck.
      */
     public void shuffle() {
-    
+        int random1 = (int)(Math.random()*10+1);
+        int random2 = (int)(Math.random()*52);
+        int random3 = (int)(Math.random()*52);
+        Card newCard[] = new Card[52];
+        
+        for (int i = 0; i < newCard.length-random1; i++) {
+            newCard[i] = this.cards[i+random1];
+        }
+        
+        for (int j = newCard.length-random1+1; j < newCard.length; j++) {
+            newCard[j] = this.cards[j-2];
+        }
+        this.cards = newCard;
+        swap(random2,random3);
     }
 
     /**
      * Swap the Cards at indices i and j.
      */
     public void swap(int i, int j) {
-    
+        Card temp1 = this.cards[i];
+        Card temp2 = this.cards[j];
+        this.cards[i] = temp2;
+        this.cards[j] = temp1;
+        
     }
 
     public Card getMaxCard() { 
@@ -73,7 +90,10 @@ public class Deck {
         for (int i = 0; i < size; i++) {
             if (cards[i].getSuit() >= cards[i+1].getSuit()) {
                 maxCard = cards[i];
-                if (cards[i].getRank() >= cards[i+1].getSuit() ) {
+                
+            }
+            else{
+                if (cards[i].getRank() >= cards[i+1].getRank() ) {
                     maxCard = cards[i];
                 }
             }

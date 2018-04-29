@@ -8,6 +8,27 @@ public class Screen {
     private int gridCount;
 
     public Screen() {
+        items = new Item[MAX_GRID];
+        itemCount = 0;
+        gridCount = 0;
+    }
+    
+    public boolean addItem(Item obj){
+        
+        int size = 1;
+        if (obj != null && obj instanceof Widget) {
+            Widget wg = (Widget)obj;
+            size = wg.getnGrid();
+        }
+        if (gridCount+size <= 24) {
+            items[itemCount] = obj;
+            itemCount++;
+            gridCount = this.gridCount+size;
+            return true;
+        }
+        else {
+            return false;
+        }
 
     }
 
