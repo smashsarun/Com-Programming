@@ -9,27 +9,26 @@ public class Screen {
 
     public Screen() {
         items = new Item[MAX_GRID];
-        itemCount = 0;
-        gridCount = 0;
+        this.itemCount = 0;
+        this.gridCount = 0;
     }
     
     public boolean addItem(Item obj){
         
         int size = 1;
+        
         if (obj != null && obj instanceof Widget) {
-            Widget wg = (Widget)obj;
-            size = wg.getnGrid();
+            Widget temp = (Widget)obj;
+            size = temp.getnGrid();
         }
-        if (gridCount+size <= 24) {
-            items[itemCount] = obj;
-            itemCount++;
-            gridCount = this.gridCount+size;
+        
+        if (this.gridCount + size <= MAX_GRID) {
+            this.items[itemCount] = obj;
+            this.gridCount += size;
+            this.itemCount++;
             return true;
         }
-        else {
-            return false;
-        }
-
+        return false;
     }
 
     public Item[] getItems() {

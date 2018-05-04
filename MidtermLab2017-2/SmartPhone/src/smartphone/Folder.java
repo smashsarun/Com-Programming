@@ -17,19 +17,17 @@ public class Folder extends Item {
     }
 
     public boolean addItem(Application App) {
-        if (appCount < maxApp) {
-            for (int i = 0; i < appCount; i++) {
-                if (apps[i].equals(App)) {
-                    return false;
-                }
+        for (int i = 0; i < appCount; i++) {
+            if (apps[i].equals(App)) {
+                return false;
             }
-            apps[appCount] = App;
+        }
+        if (appCount < maxApp) {
+            this.apps[appCount] = App;
             appCount++;
             return true;
         }
-        else{
-            return false;
-        }
+        return false;
     }
 
     @Override

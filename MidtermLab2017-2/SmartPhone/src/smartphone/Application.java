@@ -11,24 +11,19 @@ public class Application extends Item {
         this.icon = icon;
     }
 
-
     @Override
     public boolean equals(Object obj) {
-        Application temp = null;
+        Application temp;
         if (obj != null && obj instanceof Application) {
             temp = (Application) obj;
-            if (super.getName() == temp.getName()) {
-                if (this.icon == temp.icon) {
-                    return true;
-                }
+            if (super.getName().equals(temp.getName()) & this.icon.equals(temp.icon)) {
+                return true;
             }
         }
         return false;
     }
 
 
-    
-    
 
     @Override
     public String toString() {
