@@ -7,7 +7,7 @@ public class CheckedException {
 
     public static int countWords(String fileName)
             throws FileNotFoundException, WrongWordException {
-//        Scanner scKeyboard = new Scanner(System.in);
+        Scanner scKeyboard = new Scanner(System.in);
         int numOfWords = 0;
         Scanner scFile = new Scanner(new File(fileName));
         while (scFile.hasNext()) {
